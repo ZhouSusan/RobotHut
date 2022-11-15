@@ -1,13 +1,13 @@
 package Robots;
 import RobotBase.RobotBase;
-import org.example.Customer;
+import Base.FoodBase;
 
 public class ChefBot extends RobotBase {
     public ChefBot(String name) {
         super(name);
     }
 
-    public void prepare() {
-        System.out.format("Making %s now");
+    public void preparingMeal(FoodBase dish) {
+        dish.prepare();
     }
 }
