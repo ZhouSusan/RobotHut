@@ -46,5 +46,9 @@ public abstract class FoodBase implements FoodInterface {
     public int getQuantity() {
         return this._quantity;
     }
+
+    public double getTotal() {
+        return 0.0;
+    }
     
 }
