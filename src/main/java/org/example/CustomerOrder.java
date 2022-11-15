@@ -17,7 +17,17 @@ public class CustomerOrder {
     }
 
     public void deleteMeal(FoodBase meal) {
-        customerOrders.remove(meal);
+
+        /*alternative method - using the index of
+        int removeThisIdx = customerOrders.indexOf(meal)
+
+        */
+
+        for (int i = 0; i < customerOrders.size(); i++) {
+            if (customerOrders.get(i).getName().equals(meal.getName())) {
+                customerOrders.remove(customerOrders.get(i));
+            }
+        }
     }
 
     public double getCustomerOrderTotal() {
