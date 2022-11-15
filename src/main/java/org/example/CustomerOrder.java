@@ -9,4 +9,12 @@ public class CustomerOrder {
     public CustomerOrder(Customer customer) {
         this._customer = customer;
     }
+
+    public void addCustomerOrder(FoodBase meal) {
+        customerOrders.add(meal);
+    }
+
+    public void deleteCustomerOrder(FoodBase meal) {
+        customerOrders.remove(meal);
+    }
 }
