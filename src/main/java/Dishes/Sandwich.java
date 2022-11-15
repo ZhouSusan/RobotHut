@@ -8,6 +8,9 @@ public class Sandwich extends FoodBase {
 
     public Sandwich(int quantity) {
         super(quantity);
+        this._menuId = menuId;
+        this._name = name;
+        this._price = price;
     }
 
     @Override
@@ -15,6 +18,7 @@ public class Sandwich extends FoodBase {
         processingBread();
         processingProtein();
         addingIngredients();
+        gettingOrderReady();
         System.out.println("Mhmmhmmm, this makes me want a sandwich!");
     }
 
