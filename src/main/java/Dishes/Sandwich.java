@@ -2,8 +2,12 @@ package Dishes;
 import Base.FoodBase;
 public class Sandwich extends FoodBase {
 
-    public Sandwich(int menuId, String name, double price, int quantity) {
-        super(menuId, name, price, quantity);
+    private static final int menuId = 3;
+    private static final String name = "Philly Cheese Steak Sandwich";
+    private static final double price = 7.50;
+
+    public Sandwich(int quantity) {
+        super(quantity);
     }
 
 }

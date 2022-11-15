@@ -3,8 +3,14 @@ import Base.FoodBase;
 
 public class Pizza extends FoodBase{
 
-    public Pizza(int menuId, String name, int price, int quantity) {
-        super(menuId, name, price, quantity);
-    }
+    private static final int menuId = 2;
+    private static final String name = "Pepperoni Pizza";
+    private static final double price = 15.79;
 
+    public Pizza(int quantity) {
+        super(quantity);
+        this._menuId = menuId;
+        this._name = name;
+        this._price = price;
+    }
 }

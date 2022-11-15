@@ -8,10 +8,7 @@ public abstract class FoodBase implements FoodInterface {
     protected double _price;
     protected int _quantity;
 
-    public FoodBase(int menuId, String name, double price, int quantity) {
-        this._menuId = menuId;
-        this._name = name;
-        this._price = price;
+    public FoodBase( int quantity) {
         this._quantity = quantity;
     }
 
@@ -50,5 +47,8 @@ public abstract class FoodBase implements FoodInterface {
     public double getTotal() {
         return _price * _quantity;
     }
-    
+
+//    public void orderFood(int quantity) {
+//        setQuantity(quantity);
+//    }
 }
