@@ -10,11 +10,19 @@ public class CustomerOrder {
         this._customer = customer;
     }
 
-    public void addCustomerOrder(FoodBase meal) {
+    public void addMeal(FoodBase meal) {
         customerOrders.add(meal);
     }
 
-    public void deleteCustomerOrder(FoodBase meal) {
+    public void deleteMeal(FoodBase meal) {
         customerOrders.remove(meal);
+    }
+
+    public double getCustomerOrderTotal() {
+        double total = 0;
+        for (FoodBase i : customerOrders) {
+            total += i.getTotal();
+        }
+        return total;
     }
 }
