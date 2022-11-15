@@ -13,8 +13,5 @@ public class Burger extends FoodBase {
         this._menuId = menuId;
     }
 
-//    public void orderFood(int quantity) {
-//        setQuantity(quantity);
-//    }
 
 }

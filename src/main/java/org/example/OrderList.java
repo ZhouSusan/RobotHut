@@ -5,15 +5,15 @@ import java.util.List;
 
 public class OrderList {
     private CustomerOrder _customerOrder;
-    private List<Double> totalOrders = new ArrayList<Double>();
+    private List<Double> totalOrders;
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
-    public OrderList(CustomerOrder customerOrder) {
-        this._customerOrder = customerOrder;
+    public OrderList() {
+        totalOrders = new ArrayList<Double>();
     }
 
     public void addCustomerOrder(double customerOrderAmount) {
-        totalOrders.add(_customerOrder.getCustomerOrderTotal());
+        totalOrders.add(customerOrderAmount);
     }
 
     public void removeCustomerOrder(double customerOrderAmount) {
