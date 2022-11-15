@@ -13,5 +13,28 @@ public class Burger extends FoodBase {
         this._menuId = menuId;
     }
 
+    @Override
+    public void prepare() {
+       cookingMeat();
+       processingBread();
+       addingIngredients();
+       gettingOrderReady();
+       System.out.println("Order is ready to server. Enjoy!");
+    }
 
+    public void cookingMeat() {
+        System.out.println("Cooking patties...");
+    }
+
+    public void processingBread() {
+        System.out.println("Preparing the bread....");
+    }
+
+    public void addingIngredients() {
+        System.out.println("Adding ingredients...");
+    }
+
+    public void gettingOrderReady() {
+        System.out.println("Getting order ready");
+    }
 }

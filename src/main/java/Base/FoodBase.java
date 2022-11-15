@@ -8,7 +8,7 @@ public abstract class FoodBase implements FoodInterface {
     protected double _price;
     protected int _quantity;
 
-    public FoodBase( int quantity) {
+    public FoodBase(int quantity) {
         this._quantity = quantity;
     }
 
@@ -48,7 +48,6 @@ public abstract class FoodBase implements FoodInterface {
         return _price * _quantity;
     }
 
-//    public void orderFood(int quantity) {
-//        setQuantity(quantity);
-//    }
+    public void prepare() {}
+
 }
