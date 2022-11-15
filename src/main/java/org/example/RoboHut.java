@@ -1,6 +1,10 @@
 package org.example;
 import Dishes.Burger;
 import Dishes.Pizza;
+import Robots.ButlerBot;
+import Robots.ChefBot;
+import Robots.FrontDeskBot;
+import Robots.ManagerBot;
 
 public class RoboHut {
     public static void main(String[] args) {
@@ -8,13 +12,16 @@ public class RoboHut {
         Burger order1 = new Burger(2);
         Pizza pizOrder1 = new Pizza(1);
         CustomerOrder customer1Order = new CustomerOrder(customer1);
-        System.out.println(order1.getTotal());
-        System.out.println(customer1.checkBalance(customer1.getBalance(), order1.getTotal()));
         customer1Order.addMeal(order1);
         customer1Order.addMeal(pizOrder1);
         OrderList totalOrderList = new OrderList();
-        totalOrderList.addCustomerOrder(customer1Order.getCustomerOrderTotal());
-        System.out.println(customer1Order.getCustomerOrderTotal());
-        System.out.println(totalOrderList.getTotalOrders());
+        ChefBot chefBot1 = new ChefBot("Steve");
+        ButlerBot butlerBot1 = new ButlerBot("Jules");
+        FrontDeskBot frontDeskBot1 = new FrontDeskBot("Ducky");
+        ManagerBot clarie = new ManagerBot(chefBot1, frontDeskBot1, butlerBot1);
+        clarie.orderFrontDeskGreetCustomer();
+        clarie.orderButlerToTakeOrder(customer1Order);
+        clarie.orderChefToCook(pizOrder1);
+        clarie.orderFrontDeskToGetCheck(customer1Order);
     }
 }

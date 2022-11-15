@@ -16,6 +16,10 @@ public class CustomerOrder {
         customerOrders.add(meal);
     }
 
+    public Customer getCustomer () {
+        return _customer;
+    }
+
     public void deleteMeal(FoodBase meal) {
 
         /*alternative method - using the index of
